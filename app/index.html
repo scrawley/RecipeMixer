@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>RouteMixer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <nav id="header">
+        <div class="container title">
+            <div class="row">
+                <div class="col-md-4 homelink_wrapper">
+                    <a class="homelink" href="#"><h3>RouteMixer</h3></a>
+                </div>
+                <div class="col-md-offset-6 col-md-2 aboutlink_wrapper">
+                    <a class="aboutlink" href="#"><h4>About</h4></a>
+                </div>
+            </div>
+            <div class="introduction row">
+            <h1>Looking to expand your running route repetoir? Be spontaneous and let us 
+                guide you on the trails and road this week.</h1>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container">
+            <div class="row preferences">
+                <h3>What are your preferences for this week?</h3>
+            </div>
+        <div id="madlibform" class="row madlibform">
+            I want to run
+            <input type="text" placeholder="number">
+            miles over
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            days and I prefer my runs to be spread
+            <select>
+                <option value="1">Evenly</option>
+                <option value="2">Oddly</option>
+                <option value="3">Strategically</option>
+            </select>
+            throughout the week. Please find my running routes in the
+            <input type="text" placeholder="postal code, i.e. 19320">
+            area.
+        </div>
+        </div>
+        
+        <a id="mix_button" href="results.html">
+            <div class="mix_button_bg">
+                <h2>Mix Em Up!</h2>
+            </div>
+        </a>
+    </main>
+    
+
+      <div class="footer">
+          
+      </div>
+
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+        <!-- build:js(.) scripts/plugins.js -->
+        <script src="bower_components/bootstrap/js/affix.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap/js/modal.js"></script>
+        <script src="bower_components/bootstrap/js/transition.js"></script>
+        <script src="bower_components/bootstrap/js/button.js"></script>
+        <script src="bower_components/bootstrap/js/popover.js"></script>
+        <script src="bower_components/bootstrap/js/carousel.js"></script>
+        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap/js/collapse.js"></script>
+        <script src="bower_components/bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+      
+          <script type="text/javascript" src="http://api.dailymile.com/people/ben.json?callback=myCallback"></script>
+
+</body>
+</html>
