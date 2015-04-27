@@ -5,15 +5,15 @@ body {
 }
 
 #header {
- background-image: url(../images/map_bg_colored.jpg);
-    height:350px;
+ background-image: url(../images/recipeheader_gradient.jpg);
+    height:400px;
     background-size:cover;
     color:white;
 }
 
 #header-2 {
- background-image: url(../images/map_bg_colored.jpg);
-    height:100px;
+ background-image: url(../images/recipeheader_gradient.jpg);
+    height:75px;
     background-size:cover;
     color:white;
 }
@@ -61,19 +61,37 @@ a.aboutlink:hover {
 /* Madlib Form Styling */
 .preferences {
     padding-top:50px;
-    color:#C6C6C5;   
+    color:#dc6500;  
+}
+
+.preferences h3 {
+    font-size:36px;   
+}
+
+.madlibform_wrapper {
+    
 }
 
 .madlibform {
-    color:#EF4624; 
+    margin-top:50px;
+    margin-bottom:50px;
+    color:#290a59; 
     padding-top:25px;
+    padding-left:30px;
+    padding-right:30px;
     padding-bottom:50px;
     font-size:40px;
+    border-top:1px solid #290a59;
+    border-bottom:1px solid #290a59;
 }
 
-input {
+input, select {
     border:none;
     border-bottom:#C6C6C5 dotted 1px;
+}
+
+input:focus{
+    border:black 1px solid;
 }
 
 /* custom placeholder color */
@@ -108,9 +126,16 @@ a#mix_button {
     text-decoration: none;   
 }
 
+.mix_button_wrapper {
+    margin-bottom:50px; 
+}
+
+
+
 .mix_button {
     background-color:#868686;
     text-decoration: none;
+    
 }
 
 .mix_button:hover {
@@ -119,12 +144,15 @@ a#mix_button {
 }
 
 .mix_button_bg {
-    background-color: #868686;
+    background-color: #dc6500;
     text-align: center;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top:2px;
+    padding-bottom:10px;
     color:white;
     text-decoration: none;
+    -webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
 }
 
 .mix_button_bg:visited {
@@ -137,24 +165,28 @@ a#mix_button {
 }
 
 .mix_button_bg:hover {
+   
     text-align: center;
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top:2px;
+    padding-bottom:10px;
     color:white;
     text-decoration: none;
+    -webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 20px;
     
-    background: #ef4624; /* Old browsers */
-    background: -moz-linear-gradient(left, #ef4624 0%, #ffd807 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ef4624), color-stop(100%,#ffd807)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #ef4624 0%,#ffd807 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, #ef4624 0%,#ffd807 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, #ef4624 0%,#ffd807 100%); /* IE10+ */
-    background: linear-gradient(to right, #ef4624 0%,#ffd807 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4624', endColorstr='#ffd807',GradientType=1 ); /* IE6-9 */
+    background: #ff7c00; /* Old browsers */
+    background: -moz-linear-gradient(left, #ff7c00 0%, #120317 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff7c00), color-stop(100%,#120317)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #ff7c00 0%,#120317 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #ff7c00 0%,#120317 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #ff7c00 0%,#120317 100%); /* IE10+ */
+    background: linear-gradient(to right, #ff7c00 0%,#f120317 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7c00', endColorstr='#120317',GradientType=1 ); /* IE6-9 */
 }
 
 .button_wrapper {
-    background-color:#868686;   
+    margin-bottom:100px;
 }
 
 a#print_button:hover, a#export_button:hover, a#remix_button:hover {
@@ -167,12 +199,24 @@ a#print_button:hover, a#export_button:hover, a#remix_button:hover {
     border-right:1px solid white;
 }
 
+.recipe_results {
+    padding-left:0px;
+    margin-bottom:100px;
+    border-bottom:1px solid #C6C6C5;
+}
+
+.trythis {
+    margin-top:75px;
+    margin-bottom:75px; 
+    color:#dc6500;
+}
+
 .climb {
     padding-top:25px;
    color:#C6C6C5; 
 }
 
-.miles {
+.calories {
     padding-right:0px;
     padding-bottom:30px;
     padding-top:25px;
@@ -180,8 +224,8 @@ a#print_button:hover, a#export_button:hover, a#remix_button:hover {
     color:#C6C6C5;
 }
 
-.miles > h1, .climb > h1 {
-    color:#EF4624;   
+.calories > h1, .climb > h1 {
+    color:#dc6500;   
 }
 
 .map {
@@ -195,6 +239,19 @@ a#print_button:hover, a#export_button:hover, a#remix_button:hover {
     border-right:1px #C6C6C5 solid;
     vertical-align:middle;
     height:305px;
+}
+
+footer {
+    background-color:#1e0722;
+    height:100px;
+    color:white;
+    padding-top:30px;
+    padding-bottom:25px;
+    text-align: center;
+}
+
+.footertext {
+    
 }
 
 /* Custom page footer
