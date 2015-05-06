@@ -46,10 +46,11 @@
             <div class="row preferences">
                 <h3>What Are Your Cooking Preferences For This Week?</h3>
             </div>
-        <div id="madlibform" class="row madlibform">
+            
+        <form id="madlibform" class="row madlibform">
             I want to cook
             
-            <select>
+            <select id="cookingdays">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -59,27 +60,32 @@
                 <option value="7">7</option>
             </select>
             days this week, but please keep in mind that I am a
-            <select>
-                <option value="1">nothing</option>
-                <option value="2">vegan</option>
-                <option value="3">vegetarian</option>
-                <option value="3">gluten free patron</option>
-                <option value="3">pescetarian</option>
+            <select id="diet">
+                <option value="392^Vegetarian">Vegetarian</option>
+                <option value="391^Vegan">Vegan</option>
+                <option value="389^Ovo vegetarian">Ovo vegetarian</option>
+                <option value="388^Lacto vegetarian">Lacto vegetarian</option>
+                <option value="390^Pescetarian">Pescetarian</option>
+                
             </select>
             , so please refrain from including these types of recipes. If I had to choose, my favorite ingredient to use in my recipes is
-            <input type="text" placeholder="ingredient">
+            <input id="allowedingredient" type="text" placeholder="ingredient">
             .
-        </div>
+            
+            <div class="border_bottom">
+                
+            </div>
             
             <div class="row mix_button_wrapper">
                 <div class="col-md-offset-10 col-md-2">
-                    <a id="mix_button" href="results.html">
-                        <div class="mix_button_bg">
-                            <h2>Mix It!</h2>
-                        </div>
-                    </a>
+                    <input value="Mix It!" type="submit" id="mix_button" class="mix_button_bg" href="results.html">
+                        
+                    </input>
                 </div>
             </div>
+        </form>
+            
+            
             
         </div>
         
@@ -88,7 +94,7 @@
     
 
       <footer>
-          <h6 class="footertext">Mixed with ingredients from Yummly, MICA, and Sheena Crawley. ©2015</h6>
+          <h5 class="footertext">Mixed with ingredients from <a class="yummly" href="http://www.yummly.com">Yummly</a>, MICA, and <a class="portfolio" href="http://www.behance.net/sheenacrawley">Sheena Crawley</a>. ©2015</h5>
       </footer>
 
 
@@ -128,7 +134,7 @@
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
       
-          <script type="text/javascript" src="http://api.dailymile.com/people/ben.json?callback=myCallback"></script>
+          <script type="text/javascript" src="scripts/main.js"></script>
 
 </body>
 </html>

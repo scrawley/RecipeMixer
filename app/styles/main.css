@@ -75,14 +75,19 @@ a.aboutlink:hover {
 .madlibform {
     margin-top:50px;
     margin-bottom:50px;
-    color:#290a59; 
+    color:#1e0722; 
     padding-top:25px;
     padding-left:30px;
     padding-right:30px;
     padding-bottom:50px;
     font-size:40px;
     border-top:1px solid #290a59;
-    border-bottom:1px solid #290a59;
+   
+}
+
+.border_bottom {
+    padding-top:50px;
+     border-bottom:1px solid #290a59;   
 }
 
 input, select {
@@ -127,7 +132,7 @@ a#mix_button {
 }
 
 .mix_button_wrapper {
-    margin-bottom:50px; 
+    margin-top:50px;
 }
 
 
@@ -250,9 +255,11 @@ footer {
     text-align: center;
 }
 
-.footertext {
-    
+a.yummly, a.portfolio {
+    color:#dc6500;   
 }
+
+
 
 /* Custom page footer
 .footer {
