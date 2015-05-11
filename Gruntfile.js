@@ -325,7 +325,7 @@ module.exports = function (grunt) {
             '!<%= config.dist %>/scripts/vendor/*'
           ]
         },
-        uglify: true
+        uglify: false
       }
     },
 
@@ -394,7 +394,7 @@ module.exports = function (grunt) {
     'cssmin',
     'uglify',
     'copy:dist',
-    'modernizr',
+    //'modernizr',
     'rev',
     'usemin',
     'htmlmin'

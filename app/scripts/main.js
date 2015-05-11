@@ -1,7 +1,7 @@
 (function ($) {
     var getEntries,
         parseEntries, //formatting data in a way that makes sense
-        displayEntries,
+        displayResults,
        
     //first function
     getEntries = function getEntries() {
@@ -10,9 +10,9 @@
           form = $('#madlibform');
 
       form.on('submit', function (event) {
-        var value = $('#cookingdays').val();
-          var value = $('#diet').val();
-          var value = $('#allowedingredient').val();
+        var days = $('#cookingdays').val();
+          var diet = $('#diet').val();
+          var allowed = $('#allowedingredient').val();
          
           
           //use on any of those events that we listen to. this call tells the browser that on submit don't do what it normally does, such as send to a php form.
@@ -27,18 +27,18 @@
             data: {
                 "_app_id": "2017af13",
                 "_app_key": "416b7b6ca38cf6524edc8181937b2ac3",
-                "q": ,
-                "allowedDiet[]":,
+                "q": "",
+                "allowedDiet[]": "",
                 "requirePictures": true,
-                "allowedIngredient[]":,
-                "maxResult": 
+                "allowedIngredient[]": "",
+                "maxResult": days,
             }
           });
 
           req.done(parseEntries);
 
           req.error(function (data, error){
-            alert(error);
+            console.log(data, error);
           });
         } else {
           alert('Please enter a value');
@@ -48,7 +48,10 @@
 
     };
     
-     parseEntries = function parseEntriesF(data) {
+     parseEntries = function parseEntries(data) {
+         
+         console.log(data);
+         
         var i = 0,
             shots = data.shots;
         
@@ -69,29 +72,43 @@
           totalLikes = totalLikes + shots[i].likes_count;
         }
 
-        displayEntries();
+        displayResults();
     };
     
+    
+    
     //this is where we draw our content on the page
-    displayEntries = function displayEntriesF() {
-      console.log(resultsArr);
-        //storing content id as a variable
+    displayResults = function displayResults() {
+        
+        console.log(data);
       var $content = $('#content');
-        //creating a table tag, giving it classes and ids. This was created outside of the for loop
-      
-        var shots = doT.template( $('#shot-template') [0].text );
-        //template is expecting data to come as an object
-        var data = {
-            'array': shotsArr
-        };
-        //to content, we are going to append the info returned from the shots function created by doT.js
-        console.log(shots(data));
-        $content.append(shots(data));
+      var $contentTable = $('<table>', {class: 'row results_wrapper', id: 'results'});
+        var $row = $('<tr>', {class: 'recipeImg col-md-4', id: 'recipeImg'});
+        var recipeName = '<th><h2>' + recipeName + '</h2>;
+       
+        var recipeImg = document.createElement("img");
+          recipeImg.src = shot.image_url;
+          recipeImg.width = 350;
+        
+        
+       });
+        var $countCol = $('<td>').append($count, $countChart);
+        $row.append(recipeName, recipeImg, $countCol);
+        $contentTable.append($row);
+      };
+      $content.append($contentTable);
+
       displayCharts();
+        
+        
+        
+  
+        
+        
     };
 
 
-    displayCharts = function displayChartsF() {
+    displayCharts = function displayCharts() {
       for (var i = shotsArr.length - 1; i >= 0; i--) {
         var shot = shotsArr[i];
         console.log('#chart-' + shot.id);
