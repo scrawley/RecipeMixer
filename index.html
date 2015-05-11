@@ -1,4 +1,102 @@
-<!DOCTYPE html> <html class=no-js> <head> <meta charset=utf-8> <title>RecipeMixer</title> <meta name=description content=""> <meta name=viewport content="width=device-width"> <link rel="shortcut icon" href=/6df2b309.favicon.ico> <!-- Place favicon.ico and apple-touch-icon.png in the root directory --> <link rel=stylesheet href=styles/9c307a9d.vendor.css> <link rel=stylesheet href=styles/42cbfed2.main.css> <script src=scripts/vendor/modernizr.js></script>  <body> <div class=pages id=page-home> <nav id=header> <div class="container title"> <div class=row> <div class="col-md-4 homelink_wrapper"> <a class=homelink href=#><h3>RecipeMixer</h3></a> </div> <div class="col-md-offset-6 col-md-2 aboutlink_wrapper"> <a class=aboutlink href=#><h4>About</h4></a> </div> </div> <div class="introduction row"> <h1>Looking to expand your cooking menu? Be spontaneous and let us guide you to new, yummy, and exciting recipes.</h1> </div> </div> </nav> <main> <div class="container madlibform_wrapper"> <div class="row preferences"> <h3>What Are Your Cooking Preferences For This Week?</h3> </div> <form id=madlibform class="row madlibform"> I want to cook <select id=cookingdays> <option value=1>1 <option value=2>2 <option value=3>3 <option value=4>4 <option value=5>5 <option value=6>6 <option value=7>7 </select> days this week, but please keep in mind that I am a <select id=diet> <option value=392^Vegetarian>Vegetarian <option value=391^Vegan>Vegan <option value="389^Ovo vegetarian">Ovo vegetarian <option value="388^Lacto vegetarian">Lacto vegetarian <option value=390^Pescetarian>Pescetarian </select> , so please refrain from including these types of recipes. If I had to choose, my favorite ingredient to use in my recipes is <input id=allowedingredient placeholder=ingredient> . <div class=border_bottom> </div> <div class="row mix_button_wrapper"> <div class="col-md-offset-10 col-md-2"> <button value="Mix It!" type=button id=mix_button class=mix_button_bg>Mix It! </button> </div> </div> </form> </div> </main> </div> <div class=pages id=page-results> <div> <div class=container> <script id=shot-template type=text/template><table class="results table" id="results">
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title>RecipeMixer</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+      <div class="pages" id="page-home">
+      <nav id="header">
+        <div class="container title">
+            <div class="row">
+                <div class="col-md-4 homelink_wrapper">
+                    <a class="homelink" href="#"><h3>RecipeMixer</h3></a>
+                </div>
+                <div class="col-md-offset-6 col-md-2 aboutlink_wrapper">
+                    <a class="aboutlink" href="#"><h4>About</h4></a>
+                </div>
+            </div>
+            <div class="introduction row">
+            <h1>Looking to expand your cooking menu? Be spontaneous and let us 
+                guide you to new, yummy, and exciting recipes.</h1>
+            </div>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container madlibform_wrapper">
+            <div class="row preferences">
+                <h3>What Are Your Cooking Preferences For This Week?</h3>
+            </div>
+            
+        <form id="madlibform" class="row madlibform">
+            I want to cook
+            
+            <select id="cookingdays">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+            days this week, but please keep in mind that I am a
+            <select id="diet">
+                <option value="392^Vegetarian">Vegetarian</option>
+                <option value="391^Vegan">Vegan</option>
+                <option value="389^Ovo vegetarian">Ovo vegetarian</option>
+                <option value="388^Lacto vegetarian">Lacto vegetarian</option>
+                <option value="390^Pescetarian">Pescetarian</option>
+                
+            </select>
+            , so please refrain from including these types of recipes. If I had to choose, my favorite ingredient to use in my recipes is
+            <input id="allowedingredient" type="text" placeholder="ingredient">
+            .
+            
+            <div class="border_bottom">
+                
+            </div>
+            
+            <div class="row mix_button_wrapper">
+                <div class="col-md-offset-10 col-md-2">
+                    <button value="Mix It!" type="button" id="mix_button" class="mix_button_bg">Mix It!
+                    </button>
+                </div>
+            </div>
+        </form>
+            
+            
+            
+        </div>
+        
+        
+    </main>
+      </div>
+      
+      
+      <div class="pages" id="page-results">
+           
+        <div class="container">
+            
+        <script id="shot-template" type="text/template">
+        <table class="results table" id="results">
             {{~it.array :value:index }}
             <tr id="result-{{=value.id}}">
                 <th>
@@ -15,11 +113,87 @@
                     </td>
             </tr>
             {{~}}
-        </table></script> <div class="row button_wrapper"> <div class="col-md-4 remix_button_wrapper"> <a id=remix_button href=#> <div id=remix class=mix_button_bg> <h2>ReMix</h2> </div> </a> </div> <div class="col-md-offset-1 col-md-3 print_button_wrapper"> <a id=print_button href=#> <div class=mix_button_bg> <h2>Print</h2> </div> </a> </div> <div class="col-md-offset-1 col-md-3 export_button_wrapper"> <a id=export_button href=#> <div class=mix_button_bg> <h2>Export</h2> </div> </a> </div> </div> </div> </div> </div> <!--[if lt IE 10]>
+        </table>
+      </script>
+            
+        <div class="row button_wrapper">
+            <div class="col-md-4 remix_button_wrapper">
+            <a id="remix_button" href="#">
+                <div id="remix" class="mix_button_bg">
+                    <h2>ReMix</h2>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-offset-1 col-md-3 print_button_wrapper">
+            <a id="print_button" href="#">
+                <div class="mix_button_bg">
+                    <h2>Print</h2>
+                </div>
+            </a>
+            </div>
+            <div class="col-md-offset-1 col-md-3 export_button_wrapper">
+            <a id="export_button" href="#">
+                <div class="mix_button_bg">
+                    <h2>Export</h2>
+                </div>
+            </a>
+            </div>
+            
+        </div>
+        </div>
+        </div>
+          
+      </div>
+    <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]--> <footer> <h5 class=footertext>Mixed with ingredients from <a class=yummly href=http://www.yummly.com>Yummly</a>, MICA, and <a class=portfolio href=http://www.behance.net/sheenacrawley>Sheena Crawley</a>. ©2015</h5> </footer> <script src=scripts/vendor.js></script> <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --> <script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    <![endif]-->
+    
+    
+
+      <footer>
+          <h5 class="footertext">Mixed with ingredients from <a class="yummly" href="http://www.yummly.com">Yummly</a>, MICA, and <a class="portfolio" href="http://www.behance.net/sheenacrawley">Sheena Crawley</a>. ©2015</h5>
+      </footer>
+
+
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='//www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');</script> <script src=scripts/plugins.js></script> <script src=scripts/main.js></script> <script type=text/javascript src=scripts/main.js></script> <script src=scripts/doT.js></script> <script src=scripts/extra.js></script>  
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+        <!-- build:js(.) scripts/plugins.js -->
+        <script src="bower_components/bootstrap/js/affix.js"></script>
+        <script src="bower_components/bootstrap/js/alert.js"></script>
+        <script src="bower_components/bootstrap/js/dropdown.js"></script>
+        <script src="bower_components/bootstrap/js/tooltip.js"></script>
+        <script src="bower_components/bootstrap/js/modal.js"></script>
+        <script src="bower_components/bootstrap/js/transition.js"></script>
+        <script src="bower_components/bootstrap/js/button.js"></script>
+        <script src="bower_components/bootstrap/js/popover.js"></script>
+        <script src="bower_components/bootstrap/js/carousel.js"></script>
+        <script src="bower_components/bootstrap/js/scrollspy.js"></script>
+        <script src="bower_components/bootstrap/js/collapse.js"></script>
+        <script src="bower_components/bootstrap/js/tab.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+            
+            <script type="text/javascript" src="scripts/main.js"></script>
+            <script src="scripts/doT.js"></script>
+            <script src="scripts/extra.js"></script>
+
+</body>
+</html>
